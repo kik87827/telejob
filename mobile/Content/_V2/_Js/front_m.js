@@ -15,3 +15,9 @@ function popupShow(item){
         bodyDom.classList.remove("touchDis");
     });
 }
+function popupHide(item){
+    const bodyDom = document.querySelector("body");
+    const targetItem = item;
+    targetItem.classList.remove("active");
+    bodyDom.classList.remove("touchDis");
+}
