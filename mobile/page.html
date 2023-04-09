@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="http://telejob.co.kr/Content/_V2/_Css/hamburgers.min.css" />
+    <link type="text/css" rel="stylesheet" href="http://telejob.co.kr/Content/_V2/_Css/jquery.mmenu_7_01.all.css" />
+    <link type="text/css" rel="stylesheet" href="http://telejob.co.kr/Content/_V2/_Css/jquery.mhead_1_01.css" />
+    <link type="text/css" rel="stylesheet" href="http://telejob.co.kr/Content/_V2/_Css/default_m.css" />
+    <link type="text/css" rel="stylesheet" href="./Content/_V2/_Css/style_m.css" /><!-- 230408 -->
+    <script src="./Content/_V2/_Js/front_m.js"></script><!-- 230408 -->
+    <title>Document</title>
+</head>
+<body>
+    <div id="page">
+        <div id="my-header" class="mh-head first">
+            <span class="mh-btns-left">
+                <button class="hamburger hamburger--collapse"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+            </span>
+            <span class="mh-text">
+                <img src="http://telejob.co.kr/img/telejob_m_logo.png" id="teljob_top_logo" class="pointer">
+            </span>
+            <!-- <span class="mh-btns-right">
+                <a href="#menu-search"><i class="fa fa-search "></i></a>
+            </span> -->
+        </div>
+        <!-- 230409 -->
+        <div class="header-field-row">
+            <div class="field-wrap">
+                <input type="text" class="field-input">
+                <a href="#" class="btn-search-submit"></a>
+            </div>
+        </div>
+        <!-- // 230409 -->
+        <div class="mh-head second">
+            <ul class="mh-list">
+                <li><span id="head_list_home" class="pointer">HOME</span></li>
+                <li><span id="head_list_wa" class="pointer">전체채용정보</span></li>
+                <li><span id="head_list_cb" class="pointer">콜백채용정보</span></li>
+                <li><span id="head_list_top" class="pointer">인기채용정보</span></li>
+                <li><span id="head_list_sv" class="pointer">유료서비스안내</span></li>
+            </ul>
+        </div>
+        <!-- 230409 -->
+        <div class="mh-depth-menu-row">
+            <ul class="mh-depth-menu-list">
+                <li><a href="#" class="mh-depth-menu">전체채용정보</a></li>
+                <li><a href="javascript:;" id="btn-detail-search"  class="mh-depth-menu type2">상세검색</a></li>
+            </ul>
+        </div>
+        <!-- // 230409 -->
+        <!-- modal -->
+        <div class="modal-wrap" id="detail-search-popup">
+            <div class="modal-dim"></div>
+            <div class="modal-box">
+                <div class="modal-head"></div>
+                <div class="modal-content">
+                    <div class="vform-item-wrap">
+                        <div class="vform-item">
+                            <div class="vform-title-row">
+                                <p class="vform-title-main">01.직무</p>
+                                <span class="vform-title-sub">(중복선택 가능)</span>
+                            </div>
+                            <div class="vform-content-row">
+                                <ul class="props-item-list">
+                                    <li>
+                                        <input type="checkbox" id="form_01_01" class="props-form" checked>
+                                        <label for="form_01_01" class="props-label">인바운드</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_01_02" class="props-form">
+                                        <label for="form_01_02" class="props-label">아웃바운드</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_01_03" class="props-form">
+                                        <label for="form_01_03" class="props-label">인/아웃바운드</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_01_04" class="props-form">
+                                        <label for="form_01_04" class="props-label">TM지원</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_01_05" class="props-form">
+                                        <label for="form_01_05" class="props-label">금융컨설턴트(FC)</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="vform-item">
+                            <div class="vform-title-row">
+                                <p class="vform-title-main">02.상세업무</p>
+                                <span class="vform-title-sub">(중복선택 가능)</span>
+                            </div>
+                            <div class="vform-content-row">
+                                <ul class="props-item-list">
+                                    <li>
+                                        <input type="checkbox" id="form_02_01" class="props-form" checked>
+                                        <label for="form_02_01" class="props-label">고객상담(CS/QA)</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_02_02" class="props-form">
+                                        <label for="form_02_02" class="props-label">주문접수</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_02_03" class="props-form">
+                                        <label for="form_02_03" class="props-label">판매영업</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_02_04" class="props-form">
+                                        <label for="form_02_04" class="props-label">전화홍보</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_02_05" class="props-form">
+                                        <label for="form_02_05" class="props-label">설문/여론조사</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_02_06" class="props-form">
+                                        <label for="form_02_06" class="props-label">해피콜</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_02_07" class="props-form">
+                                        <label for="form_02_07" class="props-label">섭외/스케줄러</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_02_08" class="props-form">
+                                        <label for="form_02_08" class="props-label">전화강의</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_02_09" class="props-form">
+                                        <label for="form_02_09" class="props-label">단순안내</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_02_10" class="props-form">
+                                        <label for="form_02_10" class="props-label">관리자</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_02_11" class="props-form">
+                                        <label for="form_02_11" class="props-label">교육</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_02_12" class="props-form">
+                                        <label for="form_02_12" class="props-label">행정지원</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_02_13" class="props-form">
+                                        <label for="form_02_13" class="props-label">금융컨설턴트(FC)</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="vform-item">
+                            <div class="vform-title-row">
+                                <p class="vform-title-main">03.지역</p>
+                                <span class="vform-title-sub">(중목선택 가능)</span>
+                            </div>
+                            <div class="vform-content-row">
+                                <ul class="props-item-list type2">
+                                    <li>
+                                        <input type="checkbox" id="form_03_01" class="props-form">
+                                        <label for="form_03_01" class="props-label">전국</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_03_02" class="props-form" checked>
+                                        <label for="form_03_02" class="props-label">서울</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_03_03" class="props-form">
+                                        <label for="form_03_03" class="props-label">경기</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_03_04" class="props-form">
+                                        <label for="form_03_04" class="props-label">부산</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_03_05" class="props-form">
+                                        <label for="form_03_05" class="props-label">대구</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_03_06" class="props-form">
+                                        <label for="form_03_06" class="props-label">인천</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_03_07" class="props-form">
+                                        <label for="form_03_07" class="props-label">대전</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_03_08" class="props-form">
+                                        <label for="form_03_08" class="props-label">세종</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_03_09" class="props-form">
+                                        <label for="form_03_09" class="props-label">광주</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_03_10" class="props-form">
+                                        <label for="form_03_10" class="props-label">울산</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_03_11" class="props-form">
+                                        <label for="form_03_11" class="props-label">강원</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_03_12" class="props-form">
+                                        <label for="form_03_12" class="props-label">충북</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_03_13" class="props-form">
+                                        <label for="form_03_13" class="props-label">충남</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_03_14" class="props-form">
+                                        <label for="form_03_14" class="props-label">경북</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_03_15" class="props-form">
+                                        <label for="form_03_15" class="props-label">경남</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_03_16" class="props-form">
+                                        <label for="form_03_16" class="props-label">전북</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_03_17" class="props-form">
+                                        <label for="form_03_17" class="props-label">전남</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_03_18" class="props-form">
+                                        <label for="form_03_18" class="props-label">제주</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="vform-item">
+                            <div class="vform-title-row">
+                                <p class="vform-title-main">04.업종</p>
+                                <span class="vform-title-sub">(중목선택 가능)</span>
+                            </div>
+                            <div class="vform-content-row">
+                                <ul class="props-item-list">
+                                    <li>
+                                        <input type="checkbox" id="form_04_01" class="props-form" checked>
+                                        <label for="form_04_01" class="props-label">전체</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_02" class="props-form">
+                                        <label for="form_04_02" class="props-label">보험</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_03" class="props-form">
+                                        <label for="form_04_03" class="props-label">신용카드</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_04" class="props-form">
+                                        <label for="form_04_04" class="props-label">은행</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_05" class="props-form">
+                                        <label for="form_04_05" class="props-label">증권/투신/캐피탈</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_06" class="props-form">
+                                        <label for="form_04_06" class="props-label">상조/대출/기타금융</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_07" class="props-form">
+                                        <label for="form_04_07" class="props-label">TV홈쇼핑</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_08" class="props-form">
+                                        <label for="form_04_08" class="props-label">백화점/유통/도소매</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_09" class="props-form">
+                                        <label for="form_04_09" class="props-label">통신서비스</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_10" class="props-form">
+                                        <label for="form_04_10" class="props-label">인터넷쇼핑몰</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_11" class="props-form">
+                                        <label for="form_04_11" class="props-label type2">인터넷(포털,게임,커뮤니티)</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_12" class="props-form">
+                                        <label for="form_04_12" class="props-label">신문/방송/미디어</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_13" class="props-form">
+                                        <label for="form_04_13" class="props-label">물류/운송/배송</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_14" class="props-form">
+                                        <label for="form_04_14" class="props-label type3">문화/요리/레저/스포츠</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_15" class="props-form">
+                                        <label for="form_04_15" class="props-label">부동산/호텔,콘도</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_16" class="props-form">
+                                        <label for="form_04_16" class="props-label">여행/항공/웨딩</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_17" class="props-form">
+                                        <label for="form_04_17" class="props-label">식의약품/건강식품</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_18" class="props-form">
+                                        <label for="form_04_18" class="props-label">의료/보건기관</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_19" class="props-form">
+                                        <label for="form_04_19" class="props-label">교육/출판/광고</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_20" class="props-form">
+                                        <label for="form_04_20" class="props-label">자동차</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_21" class="props-form">
+                                        <label for="form_04_21" class="props-label">전기/가스/수도</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_22" class="props-form">
+                                        <label for="form_04_22" class="props-label">공공기관/협,단체</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_23" class="props-form">
+                                        <label for="form_04_23" class="props-label">컨설팅/연구/조사</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_24" class="props-form">
+                                        <label for="form_04_24" class="props-label type3">정비/AS/렌탈서비스</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_25" class="props-form">
+                                        <label for="form_04_25" class="props-label type3">회계/세무/법무/노무</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_26" class="props-form">
+                                        <label for="form_04_26" class="props-label">IT정보통신</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_27" class="props-form">
+                                        <label for="form_04_27" class="props-label">기타 제조/판매업</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_04_28" class="props-form">
+                                        <label for="form_04_28" class="props-label">컨택(콜)센터 운영</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="vform-item">
+                            <div class="vform-title-row">
+                                <p class="vform-title-main">05.고용형태</p>
+                                <span class="vform-title-sub">(중복선택 가능)</span>
+                            </div>
+                            <div class="vform-content-row">
+                                <ul class="props-item-list">
+                                    <li>
+                                        <input type="checkbox" id="form_05_01" class="props-form" checked>
+                                        <label for="form_05_01" class="props-label">전체</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_05_02" class="props-form">
+                                        <label for="form_05_02" class="props-label">정규</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_05_03" class="props-form">
+                                        <label for="form_05_03" class="props-label">계약</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_05_04" class="props-form">
+                                        <label for="form_05_04" class="props-label">파견</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_05_05" class="props-form">
+                                        <label for="form_05_05" class="props-label">위임/도급</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_05_06" class="props-form">
+                                        <label for="form_05_06" class="props-label">위촉</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_05_07" class="props-form">
+                                        <label for="form_05_07" class="props-label">인턴</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_05_08" class="props-form">
+                                        <label for="form_05_08" class="props-label">교육/연수생</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="form_05_09" class="props-form">
+                                        <label for="form_05_09" class="props-label">알바</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="vform-item">
+                            <div class="vform-title-row">
+                                <p class="vform-title-main">06. 직접 입력</p>
+                            </div>
+                            <div class="vform-content-row">
+                                <div class="field-wrap">
+                                    <input type="text" class="field-input">
+                                    <a href="#" class="btn-search-submit"></a>
+                                </div>
+                                <div class="field-search-key-row">
+                                    <span class="search-key-label">인기검색어</span>
+                                    <ul class="search-keyword-list">
+                                        <li><a href="#" class="search-keyword">동의콜</a></li>
+                                        <li><a href="#" class="search-keyword">인바운드</a></li>
+                                        <li><a href="#" class="search-keyword">재택</a></li>
+                                        <li><a href="#" class="search-keyword">건강식품</a></li>
+                                        <li><a href="#" class="search-keyword">보장분석</a></li>
+                                        <li><a href="#" class="search-keyword">POM</a></li>
+                                        <li><a href="#" class="search-keyword">axa</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-submit-wrap">
+                        <a href="#" class="btn-submit type-search"><span class="btn-submit-text">선택한 조건으로 검색</span></a>
+                        <a href="#" class="btn-submit type-delete"><span class="btn-submit-text">초기화</span></a>
+                        <a href="#" class="btn-submit type-delete"><span class="btn-submit-text">조건저장</span></a>
+                    </div>
+                </div>
+                <button type="button" class="btn-modal-close"></button>
+            </div>
+        </div>
+        <!-- // modal -->
+        <script>
+            document.querySelector("#btn-detail-search").addEventListener("click",()=>{
+                popupShow(document.querySelector("#detail-search-popup"));
+            });
+        </script>
+    </div>
+</body>
+</html>
