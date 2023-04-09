@@ -54,7 +54,7 @@ input.field-input{flex:1;min-width:0;appearance: none;box-sizing:border-box;widt
 .props-label.type2{}
 .props-label.type3{}
 
-.btn-submit-wrap{flex:0;display:flex;justify-content: center;align-items: center;padding:10px 0 15px;}
+.btn-submit-wrap{flex:0;display:flex;justify-content: center;align-items: center;padding:5px 0 15px;}
 .btn-submit{display:flex;align-items:center;background:#3070b6;position:relative;border-radius:5px;color:#fff;margin:10px 3px 0;padding:10px 8px 10px 30px;
     box-shadow: 0 5px 0px 0 rgba(32,79,153,1);
     -webkit-box-shadow: 0 5px 0px 0 rgba(32,79,153,1);
