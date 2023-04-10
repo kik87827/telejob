@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> <!-- 230410 -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
     <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link type="text/css" rel="stylesheet" href="https://telejob.co.kr/Content/_V2/_Css/hamburgers.min.css" />
@@ -443,6 +443,16 @@
             document.querySelector("#btn-detail-search").addEventListener("click",()=>{
                 popupShow(document.querySelector("#detail-search-popup"));
             });
+            /* 230410 */
+            document.querySelectorAll(".field-input").forEach((item)=>{
+                const modalContent = item.closest(".modal-content");
+                item.addEventListener("focus",()=>{
+                    setTimeout(()=>{
+                        modalContent.scrollTo(0,modalContent.scrollTop+20);
+                    },30);
+                })
+            });
+            /* // 230410 */
         </script>
     </div>
 </body>
