@@ -39,6 +39,7 @@ function swiperMarqueeCall(){
             freeMode: true,
             autoplay: {
                 delay: 1,
+                disableOnInteraction: false
             },
             loop: true,
             slidesPerView: 'auto',
