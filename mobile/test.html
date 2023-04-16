@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> <!-- 230410 -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="https://telejob.co.kr/Content/_V2/_Css/hamburgers.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://telejob.co.kr/Content/_V2/_Css/jquery.mmenu_7_01.all.css" />
+    <link type="text/css" rel="stylesheet" href="https://telejob.co.kr/Content/_V2/_Css/jquery.mhead_1_01.css" />
+    <link type="text/css" rel="stylesheet" href="https://telejob.co.kr/Content/_V2/_Css/default_m.css" />
+    <link type="text/css" rel="stylesheet" href="./Content/_V2/_Css/swiper.min.css" /><!-- 230416 -->
+    <link type="text/css" rel="stylesheet" href="./Content/_V2/_Css/style_m.css" /><!-- 230408 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><!-- 230408 -->
+    <script src="./Content/_V2/_Js/swiper.min.js"></script><!-- 230408 -->
+    <script src="./Content/_V2/_Js/front_m.js"></script><!-- 230408 -->
+    <title>Document</title>
+</head>
+<body>
+    <div id="page">
+        <div class="swiper-container swiper-marquee">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Data & Analytics</div>
+                <div class="swiper-slide">Prototyping</div>
+                <div class="swiper-slide">Research, Strategy & Design</div>
+                <div class="swiper-slide">Digital Product Design & Development</div>
+                <div class="swiper-slide">Mobile (App) Design</div>
+            </div>
+        </div>
+        <style>
+            .swiper-marquee .swiper-wrapper{
+                -webkit-transition-timing-function:linear!important;    transition-timing-function:linear!important; 
+                position: relative;
+            }
+            .swiper-marquee .swiper-slide {
+                text-align: center;
+                font-size: 33px;
+                background: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: auto;
+                position: relative;
+                overflow: hidden;
+                padding: 0 50px;
+            }
+        </style>
+        <script>
+            let swiperMarquee = new Swiper('.swiper-marquee', {
+                spaceBetween: 0,
+                centeredSlides: true,
+                speed: 5000,
+                autoplay: {
+                    delay: 1,
+                },
+                loop: true,
+                slidesPerView:'auto',
+                allowTouchMove: false,
+                disableOnInteraction: true
+            });
+        </script>
+    </div>
+</body>
+</html>

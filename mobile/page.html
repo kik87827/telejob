@@ -10,8 +10,10 @@
     <link type="text/css" rel="stylesheet" href="https://telejob.co.kr/Content/_V2/_Css/jquery.mmenu_7_01.all.css" />
     <link type="text/css" rel="stylesheet" href="https://telejob.co.kr/Content/_V2/_Css/jquery.mhead_1_01.css" />
     <link type="text/css" rel="stylesheet" href="https://telejob.co.kr/Content/_V2/_Css/default_m.css" />
+    <link type="text/css" rel="stylesheet" href="./Content/_V2/_Css/swiper.min.css" /><!-- 230416 -->
     <link type="text/css" rel="stylesheet" href="./Content/_V2/_Css/style_m.css" /><!-- 230408 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><!-- 230408 -->
+    <script src="./Content/_V2/_Js/swiper.min.js"></script><!-- 230408 -->
     <script src="./Content/_V2/_Js/front_m.js"></script><!-- 230408 -->
     <title>Document</title>
 </head>
@@ -414,15 +416,22 @@
                                 </div>
                                 <div class="field-search-key-row">
                                     <span class="search-key-label">인기검색어</span>
-                                    <div class="search-keyword-list-wrap">
-                                        <ul class="search-keyword-list">
-                                            <li><a href="#" class="search-keyword">동의콜</a></li>
-                                            <li><a href="#" class="search-keyword">인바운드</a></li>
-                                            <li><a href="#" class="search-keyword">재택</a></li>
-                                            <li><a href="#" class="search-keyword">건강식품</a></li>
-                                            <li><a href="#" class="search-keyword">보장분석</a></li>
-                                            <li><a href="#" class="search-keyword">POM</a></li>
-                                            <li><a href="#" class="search-keyword">axa</a></li>
+                                    <div class="search-keyword-list-wrap swiper-marquee">
+                                        <ul class="search-keyword-list swiper-wrapper">
+                                            <li class="swiper-slide"><a href="#" class="search-keyword">동의콜</a></li>
+                                            <li class="swiper-slide"><a href="#" class="search-keyword">인바운드</a></li>
+                                            <li class="swiper-slide"><a href="#" class="search-keyword">재택</a></li>
+                                            <li class="swiper-slide"><a href="#" class="search-keyword">건강식품</a></li>
+                                            <li class="swiper-slide"><a href="#" class="search-keyword">보장분석</a></li>
+                                            <li class="swiper-slide"><a href="#" class="search-keyword">POM</a></li>
+                                            <li class="swiper-slide"><a href="#" class="search-keyword">axa</a></li>
+                                            <li class="swiper-slide"><a href="#" class="search-keyword">동의콜</a></li>
+                                            <li class="swiper-slide"><a href="#" class="search-keyword">인바운드</a></li>
+                                            <li class="swiper-slide"><a href="#" class="search-keyword">재택</a></li>
+                                            <li class="swiper-slide"><a href="#" class="search-keyword">건강식품</a></li>
+                                            <li class="swiper-slide"><a href="#" class="search-keyword">보장분석</a></li>
+                                            <li class="swiper-slide"><a href="#" class="search-keyword">POM</a></li>
+                                            <li class="swiper-slide"><a href="#" class="search-keyword">axa</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -440,9 +449,17 @@
         </div>
         <!-- // modal -->
         <script>
+            /* 230417 */
             document.querySelector("#btn-detail-search").addEventListener("click",()=>{
-                popupShow(document.querySelector("#detail-search-popup"));
+                popupShow(document.querySelector("#detail-search-popup"),()=>{
+                    // callback
+                    console.log('callback');
+                    setTimeout(()=>{
+                        swiperMarqueeCall();
+                    },30);
+                });
             });
+            /* // 230417 */
             /* 230410 */
             document.querySelectorAll(".field-input").forEach((item)=>{
                 const modalContent = item.closest(".modal-content");
